@@ -30,7 +30,7 @@ WORKDIR /var/www/html/Camping_Espana_Frontend
 # Build de la SPA
 RUN mkdir ../Camping_Espana
 
-RUN npm install && ng build --base-href ./
+RUN npm install && npm install -g @angular/cli@16.2.16 && ng build --base-href ./
 
 RUN mv ./dist/camping-espana-frontend/* ../Camping_Espana
 RUN cp .htaccess ../Camping_Espana
@@ -49,7 +49,7 @@ RUN ./composer.phar install
 
 # TODO: Ponerlo en el readme.md 
 
-RUN php artisan migrate
+#RUN php artisan migrate
 
 WORKDIR /var/www/html
 
