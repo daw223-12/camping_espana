@@ -32,7 +32,10 @@
     "leaflet-routing-machine": "^3.2.12",
     "@popperjs/core": "^2.11.8",
     "axios": "^1.6.8",
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "@angular-devkit/build-angular": "^16.2.16",
+    "@angular/cli": "^16.2.16",
+    "@angular/compiler-cli": "^16.2.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.16",
