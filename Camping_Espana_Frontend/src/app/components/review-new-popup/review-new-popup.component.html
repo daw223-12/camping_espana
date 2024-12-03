@@ -1,0 +1,39 @@
+<h2 matDialogTitle class="text-center">{{ "user.addReview" | translate }}</h2>
+<mat-dialog-content>
+  <form (ngSubmit)="submit()" #newReviewForm="ngForm" class="text-center">
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'user.places' | translate }}</mat-label>
+      <mat-select [(ngModel)]="reviewData.place_id" name="place" required>
+        <mat-option *ngFor="let option of options" [value]="option.value">
+          {{ option.label }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-label class="me-3">{{ "user.score" | translate }}</mat-label><br>
+    <mat-slider class="mb-3 w-75">
+      <input
+        matSliderThumb
+        [(ngModel)]="reviewData.score"
+        #slider="ngModel"
+        name="score"
+      />
+    </mat-slider>
+    <br />
+    <mat-form-field>
+      <mat-label>{{ 'user.comment' | translate }}</mat-label>
+      <textarea
+        name="comment"
+        matInput
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        [(ngModel)]="reviewData.comment"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="5"
+      ></textarea>
+    </mat-form-field>
+    <mat-dialog-actions class="justify-content-end">
+      <button type="submit" mat-button>Ok</button>
+    </mat-dialog-actions>
+  </form>
+</mat-dialog-content>

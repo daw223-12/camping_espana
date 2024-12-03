@@ -1,0 +1,36 @@
+<h2 matDialogTitle>Usuarios encontrados</h2>
+<mat-dialog-content>
+  <form
+    [formGroup]="myForm"
+    class="scrollable-container d-flex flex-column align-items-center"
+    style="position: relative"
+  >
+    <div formArrayName="groupArray" class="w-100">
+      <div
+        *ngFor="let input of groupArrayControls; let i = index"
+        [formGroupName]="i"
+        class="d-flex align-items-center"
+      >
+        <input
+          type="text"
+          formControlName="username"
+          #inputs
+          class="textarea form-control-sm m-1"
+        />
+        
+        <button
+        (click)="addUser()"
+          mat-mini-fab
+          color="primary"
+          matTooltip="{{ 'user.add' | translate }}"
+          class="btn btn-outline-primary m-2"
+        >
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions class="d-flex justify-content-end">
+    <button mat-button (click)="onNoClick()">Ok</button>
+  </mat-dialog-actions>

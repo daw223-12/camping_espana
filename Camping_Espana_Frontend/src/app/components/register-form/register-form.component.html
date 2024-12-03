@@ -1,0 +1,43 @@
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <p>{{'login.register' | translate}}</p>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="align-all-center">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{'login.username' | translate}}</mat-label>
+                    <input matInput formControlName="username" required>
+                </mat-form-field>
+            </p>
+            <p class="align-all-center">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{'login.email' | translate}}</mat-label>
+                    <input matInput formControlName="email" required>
+                </mat-form-field>
+            </p>
+            <p class="align-all-center">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{'login.password' | translate}}</mat-label>
+                    <input matInput formControlName="password" type="password" required>
+                </mat-form-field>
+            </p>
+            <p class="align-all-center">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{'login.confirmPassword' | translate}}</mat-label>
+                    <input matInput formControlName="confirmPassword" type="password" required>
+                </mat-form-field>
+            </p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-button type="submit">{{'login.register' | translate}}</button>
+            <!-- El botón de tipo "submit" enviará el formulario -->
+            <!-- El evento (ngSubmit) llamará al método register() en el componente cuando se envíe el formulario -->
+        </mat-card-actions>
+    </mat-card>
+    <div class="d-flex justify-content-end">
+        <a routerLink="/login" class="link-opacity-25-hover ms-auto">{{'login.login' | translate}}</a>
+    </div>
+</form>

@@ -1,0 +1,27 @@
+<mat-toolbar class="w-100 p-5">
+  <a class="text-decoration-none" [routerLink]="['/map']">
+  <div class="h-100 d-flex flex-row align-items-centerr">
+      <img src="../../../assets/SVGs/logo.svg" class="img-fluid h-auto " style="max-height: 50px;"/>
+      <span class="m-3">My App</span>
+    </div>
+  </a>
+  <span class="example-spacer"></span>
+  <a routerLinkActive="active" [routerLink]="['/user']">
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>group</mat-icon>
+    </button>
+  </a>
+  <a routerLinkActive="active" (click)="logout()" [routerLink]="['/login']">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </a>
+</mat-toolbar>

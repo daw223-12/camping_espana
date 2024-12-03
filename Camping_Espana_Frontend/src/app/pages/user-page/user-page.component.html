@@ -1,0 +1,30 @@
+<app-header style="height: 10vh;"></app-header>
+<br>
+<div class="w-80 d-flex flex-wrap justify-content-around " style="min-height: 85vh;">
+  <section id="reviews">
+    <app-review-container></app-review-container>
+  </section>
+
+  <section id="reviews" class="d-flex flex-column">
+    <!-- TODO Esto igual debería ser un componente separado -->
+     <form (ngSubmit)="searchUsers()" #newReviewForm="ngForm" class="text-center">
+
+       <mat-form-field class="example-form-field">
+           <mat-label>{{'user.userSearch' | translate}}</mat-label>
+           <input matInput  [(ngModel)]="search"
+           #slider="ngModel"
+           name="search" >
+             <button matSuffix mat-icon-button aria-label="Clear">
+               <mat-icon>search</mat-icon>
+             </button>
+         </mat-form-field>
+     </form>
+      <br>
+      <app-number-requests></app-number-requests>
+      <br>
+      <h1>Hola</h1>
+      <app-users-followed></app-users-followed>
+  </section>
+</div>
+<br>
+<app-footer></app-footer>

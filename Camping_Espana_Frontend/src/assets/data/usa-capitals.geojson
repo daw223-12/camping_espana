@@ -1,0 +1,115 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.723722, 41.652347]
+      },
+      "properties": {
+        "province": "Valladolid",
+        "name": "Plaza Mayor, Valladolid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.710933, 41.640816]
+      },
+      "properties": {
+        "province": "Valladolid",
+        "name": "Museo Nacional de Escultura"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.842466, 41.699818]
+      },
+      "properties": {
+        "province": "Valladolid",
+        "name": "Iglesia de Santa María, Simancas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.723147, 41.581772]
+      },
+      "properties": {
+        "province": "Valladolid",
+        "name": "Castillo de Portillo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.889091, 41.747384]
+      },
+      "properties": {
+        "province": "Valladolid",
+        "name": "Castillo de Simancas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.693925, 41.631933]
+      },
+      "properties": {
+        "province": "Valladolid",
+        "name": "Catedral de Valladolid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.700269, 41.629567]
+      },
+      "properties": {
+        "province": "Valladolid",
+        "name": "Parque Campo Grande"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.796719, 41.745522]
+      },
+      "properties": {
+        "province": "Valladolid",
+        "name": "Bodegas Arzuaga Navarro, Quintanilla de Onésimo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.953548, 41.488333]
+      },
+      "properties": {
+        "province": "Valladolid",
+        "name": "Peñafiel y Castillo de Peñafiel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.944655, 41.384556]
+      },
+      "properties": {
+        "province": "Valladolid",
+        "name": "Iglesia de San Millán, Medina del Campo"
+      }
+    }
+  ]
+}

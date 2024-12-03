@@ -1,0 +1,32 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()" >
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <p>{{'login.login' | translate}}</p>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="align-all-center">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{'login.email' | translate}}</mat-label>
+                    <input matInput formControlName="email" required>
+                </mat-form-field>
+            </p>
+            <p class="align-all-center">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{'login.password' | translate}}</mat-label>
+                    <input matInput formControlName="password" type="password" required>
+                </mat-form-field>
+            </p>
+        </mat-card-content>
+        <mat-card-actions style="align-self: end;">
+            <button mat-button type="submit">{{'login.login' | translate}}</button>
+            <!-- <button mat-button><mat-icon>login</mat-icon></button> -->
+            <!-- El botón de tipo "submit" enviará el formulario -->
+            <!-- El evento (ngSubmit) llamará al método login() en el componente cuando se envíe el formulario -->
+        </mat-card-actions>
+    </mat-card>
+    <div class="d-flex justify-content-end">
+        <a routerLink="/register" class="link-opacity-25-hover ms-auto">{{'login.register' | translate}}</a>
+    </div>
+</form>

@@ -1,0 +1,33 @@
+<h2 matDialogTitle>Editar reseña</h2>
+<mat-dialog-content>
+  <form (ngSubmit)="submit()" #newReviewForm="ngForm" class="text-center">
+    <mat-label class="me-3">{{ "user.score" | translate }}</mat-label><br>
+    <mat-slider class="mb-3 w-75">
+      <input
+        matSliderThumb
+        [(ngModel)]="reviewData.score"
+        #slider="ngModel"
+        name="score"
+      />
+    </mat-slider>
+    <br />
+    <mat-form-field>
+      <mat-label>{{ 'user.comment' | translate }}</mat-label>
+      <textarea
+        name="comment"
+        matInput
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        [(ngModel)]="reviewData.comment"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="5"
+      ></textarea>
+    </mat-form-field>
+    <mat-dialog-actions class="justify-content-end">
+      <button type="button" class="btn-outline-secondary" mat-button (click)="delete()">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button type="submit" mat-button>Ok</button>
+    </mat-dialog-actions>
+  </form>
+  </mat-dialog-content>

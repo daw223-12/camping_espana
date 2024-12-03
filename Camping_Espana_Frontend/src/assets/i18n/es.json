@@ -1,0 +1,28 @@
+{
+    "login": {
+        "login": "Iniciar sesión",
+        "register": "Registro de usuario",
+        "username": "Nombre de usuario",
+        "password": "Contraseña",
+        "email": "E-mail",
+        "confirmPassword": "Confirmar contraseña",
+        "recoverPassword": "Recuperar contraseña"
+    },
+    "user": {
+        "reviews": "Reseñas:",
+        "cancel": "Cancelar",
+        "comment": "Comentario",
+        "places": "Lugares",
+        "requests": "Solicitudes Pendientes",
+        "edit": "Editar",
+        "editReview": "Editar reseña",
+        "add": "Añadir",
+        "addReview": "Añadir reseña",
+        "delete": "Borrar",
+        "accept": "Aceptar",
+        "userSearch": "Buscar email",
+        "followers": "Número de seguidores",
+        "follows": "Amigos:",
+        "score": "Puntuación"
+    }
+}
