@@ -9,9 +9,9 @@ import { Review } from '../models/review';
 })
 export class FriendshipsService {
 
-  private baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend:8000/api/friends';
-  private pendingFriendsUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend:8000/api/pendingFriends';
-  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend:8000/sanctum/csrf-cookie';
+  private baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend/api/friends';
+  private pendingFriendsUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend/api/pendingFriends';
+  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/sanctum/csrf-cookie';
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 

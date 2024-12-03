@@ -8,8 +8,8 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class UserService {
 
-  private baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend:8000/api/users';
-  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend:8000/sanctum/csrf-cookie';
+  private baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend/api/users';
+  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/sanctum/csrf-cookie';
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 
