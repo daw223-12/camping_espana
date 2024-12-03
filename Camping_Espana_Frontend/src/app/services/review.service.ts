@@ -9,8 +9,8 @@ import { Review } from '../models/review';
 })
 export class ReviewService {
 
-  private baseUrl: string = 'http://localhost:8000/api/reviews';
-  private csrfUrl = 'http://localhost:8000/sanctum/csrf-cookie';
+  private baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend:8000/api/reviews';
+  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend:8000/sanctum/csrf-cookie';
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 

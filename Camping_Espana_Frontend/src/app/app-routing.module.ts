@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'register', component: LoginPageComponent },
   {
     path: '',
+    canActivateChild: [authGuard],
     children: [
       { path: 'user', component: UserPageComponent},
       { path: 'map', component: MapPageComponent },

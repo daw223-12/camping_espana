@@ -7,9 +7,9 @@ import { catchError, Observable, switchMap, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  baseUrl: string = 'http://localhost:8000';
-  private csrfUrl = 'http://localhost:8000/sanctum/csrf-cookie';
-  private apiUrl = 'http://localhost:8000/login';
+  baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend:8000';
+  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend:8000/sanctum/csrf-cookie';
+  private apiUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend:8000/login';
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 
