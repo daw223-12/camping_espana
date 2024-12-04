@@ -7,9 +7,9 @@ import { catchError, Observable, switchMap, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend';
-  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/sanctum/csrf-cookie';
-  private apiUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/login';
+  baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php';
+  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php/sanctum/csrf-cookie';
+  private apiUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php/login';
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 
