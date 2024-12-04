@@ -13,6 +13,9 @@ services:
     networks:
       networkwp:
         ipv4_address: 172.24.0.7
+    volumes:
+      - bbdd:/var/lib/mysql
+
   web:
     build: .
     restart: always
@@ -45,3 +48,6 @@ networks:
     ipam:
       config:
         - subnet: 172.24.0.0/24
+
+volumes:
+  - bbdd
