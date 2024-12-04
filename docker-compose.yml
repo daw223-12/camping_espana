@@ -50,4 +50,4 @@ networks:
         - subnet: 172.24.0.0/24
 
 volumes:
-  - bbdd
+  bbdd:
