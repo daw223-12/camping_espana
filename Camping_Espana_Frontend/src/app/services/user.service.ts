@@ -3,13 +3,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, switchMap } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
 
+import { ApiRoutes as api } from './../globals';
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend/api/users';
-  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/sanctum/csrf-cookie';
+  private baseUrl: string = api.DEVELOP_API_URL+'/users';
+  private csrfUrl = api.DEVELOP_CSRF_URL;
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 

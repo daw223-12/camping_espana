@@ -47,6 +47,8 @@ import { UsersSearchComponent } from './components/users-search/users-search.com
 import { UsersSearchPopupComponent } from './components/users-search-popup/users-search-popup.component';
 import { ReviewEditPopupComponent } from './components/review-edit-popup/review-edit-popup.component';
 import { ReviewNewPopupComponent } from './components/review-new-popup/review-new-popup.component';
+import { PlacePageComponent } from './pages/place-page/place-page.component';
+import { FriendPageComponent } from './pages/friend-page/friend-page.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -73,6 +75,8 @@ export function createTranslateLoader(http: HttpClient) {
     UsersSearchPopupComponent,
     ReviewEditPopupComponent,
     ReviewNewPopupComponent,
+    PlacePageComponent,
+    FriendPageComponent,
   ],
   imports: [
     MatCardModule,

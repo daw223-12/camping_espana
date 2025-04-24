@@ -3,18 +3,22 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { catchError, Observable, switchMap, throwError } from 'rxjs';
 
+import { ApiRoutes as api } from './../globals';
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php';
-  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php/sanctum/csrf-cookie';
-  private apiUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php/login';
+  
+  // baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php';
+  // private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php/sanctum/csrf-cookie';
+  // private apiUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php/login';
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 
   private getCsrfToken(): Observable<any> {
-    return this.http.get(this.csrfUrl, { withCredentials: true });
+    console.log(api.DEVELOP_CSRF_URL)
+    return this.http.get(api.DEVELOP_CSRF_URL, { withCredentials: true });
   }
 
   login(data: any): Observable<any> {
@@ -23,7 +27,7 @@ export class AuthService {
         const headers = new HttpHeaders({
           'X-XSRF-TOKEN': this.cookieService.get('XSRF-TOKEN')
         });
-        return this.http.post(this.apiUrl, data, { headers: headers, withCredentials: true });
+        return this.http.post(api.DEVELOP_AUTH_URL+"/login", data, { headers: headers, withCredentials: true });
       })
     );
   }
@@ -34,7 +38,7 @@ export class AuthService {
         const headers = new HttpHeaders({
           'X-XSRF-TOKEN': this.cookieService.get('XSRF-TOKEN')
         });
-        return this.http.get(this.baseUrl+"/api/user", { headers: headers, withCredentials: true });
+        return this.http.get(api.DEVELOP_AUTH_URL+"/api/user", { headers: headers, withCredentials: true });
       })
     );
   }
@@ -45,7 +49,7 @@ export class AuthService {
         const headers = new HttpHeaders({
           'X-XSRF-TOKEN': this.cookieService.get('XSRF-TOKEN')
         });
-        return this.http.post(this.baseUrl + '/register', data, { headers: headers, withCredentials: true });
+        return this.http.post(api.DEVELOP_AUTH_URL+'/register', data, { headers: headers, withCredentials: true });
       })
     );
   }
@@ -57,7 +61,7 @@ export class AuthService {
           'X-XSRF-TOKEN': this.cookieService.get('XSRF-TOKEN'),
         });
         return this.http.post(
-          this.baseUrl + '/logout',
+          api.DEVELOP_AUTH_URL + '/logout',
           {},
           { headers: headers, withCredentials: true }
         );

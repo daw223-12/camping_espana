@@ -4,13 +4,15 @@ import { Observable, switchMap } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
 import { Review } from '../models/review';
 
+import { ApiRoutes as api } from './../globals';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ReviewService {
 
-  private baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend/api/reviews';
-  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/sanctum/csrf-cookie';
+  private baseUrl: string = api.DEVELOP_API_URL+'/reviews';
+  private csrfUrl = api.DEVELOP_CSRF_URL;
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 

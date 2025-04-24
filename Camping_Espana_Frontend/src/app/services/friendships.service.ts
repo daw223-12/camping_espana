@@ -4,14 +4,16 @@ import { Observable, switchMap } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
 import { Review } from '../models/review';
 
+import { ApiRoutes as api } from './../globals';
+
 @Injectable({
   providedIn: 'root'
 })
 export class FriendshipsService {
-
-  private baseUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php/api/friends';
-  private pendingFriendsUrl: string = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php/api/pendingFriends';
-  private csrfUrl = 'http://camping-espana.serveminecraft.net/camping-espana-backend/index.php/sanctum/csrf-cookie';
+  
+  private baseUrl: string = api.DEVELOP_API_URL+'/friends';
+  private pendingFriendsUrl: string = api.DEVELOP_API_URL+'pendingFriends';
+  private csrfUrl = api.DEVELOP_CSRF_URL;
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 

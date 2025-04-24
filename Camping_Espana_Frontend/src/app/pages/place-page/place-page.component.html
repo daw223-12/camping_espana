@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<main class="page-content">
+  <!-- Columna izquierda: Reseñas
+  <section class="reviews-section">
+    <div class="card-title">
+      <h2>Reseñas</h2>
+    </div>
+    <div class="reviews-list">
+       Aquí irán las reseñas 
+    </div>
+    <button class="add-review-button">Agregar Reseña</button>
+  </section> -->
+
+  <div class="w-80 d-flex flex-wrap justify-content-around " style="min-height: 85vh;">
+    <section id="reviews">
+      <app-review-container></app-review-container>
+      </section>
+      </div>
+
+  <!-- Columna derecha: Valoraciones + Collage -->
+  <section class="right-section">
+    <div class="rating-summary">
+      <h2>Valoración Media: ⭐⭐⭐⭐☆</h2>
+    </div>
+    <div class="photo-collage">
+      <!-- Aquí meteremos las fotos -->
+      <div class="photo" *ngFor="let photo of photos">
+        <img [src]="photo.url" [alt]="photo.alt" />
+      </div>
+    </div>
+  </section>
+</main>

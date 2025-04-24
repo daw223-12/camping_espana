@@ -1,0 +1,84 @@
+/* page.component.scss */
+html, body{
+  height:100%
+  margin 0;
+}
+.page-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  
+  .page-content {
+    height: 80%;
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .cardTitle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  h2 {
+    width: fit-content;
+  }
+  
+  .reviews-section {
+    height:100%;
+    flex: 1;
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 0.7;
+  }
+  
+  .add-review-button {
+    margin-top: auto;
+    padding: 0.8rem;
+    color: black;
+    border: 1 solid rgb(155, 155, 155);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .add-review-button:hover {
+    background-color: #dcdcdc;
+  }
+  
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .rating-summary {
+    background: #fff8dc;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .photo-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
